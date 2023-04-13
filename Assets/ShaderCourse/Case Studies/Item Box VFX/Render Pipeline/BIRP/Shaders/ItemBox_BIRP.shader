@@ -59,7 +59,7 @@ Shader "Jettelly/Item Box/Box"
             {
                 fixed c = tex2D(_MainTex, i.uv).r;
                 float t = _Time.y * _SpeedColor;
-                float2 uv_ramp = float2(c + t, 0);
+                float2 uv_ramp = float2(c , 0);
                 fixed4 rampTex = tex2D(_RampTex, i.uv_ramp + uv_ramp);  
 
                 return rampTex;
